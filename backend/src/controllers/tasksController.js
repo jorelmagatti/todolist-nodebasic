@@ -1,10 +1,16 @@
 const tasksModel = require('../models/tasksModel');
 
-const getAllTask = async (req, res) => {
-  const tasks = await tasksModel.getAllTask();
+const getAllTask = async (_req, res) => {
+  const [tasks] = await tasksModel.getAllTask();
   return res.status(200).json(tasks);
 };
 
+const postTask = async (req, res) => {
+  const tasks = await tasksModel.createTasks(req.body);
+  return res.status(201).json(tasks);
+};
+
 module.exports = {
-  getAllTask
+  getAllTask,
+  postTask
 };
