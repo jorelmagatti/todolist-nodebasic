@@ -9,7 +9,12 @@ const createTasks = async (task) => {
   const { title } = task;
   const time = new Date(Date.now()).toUTCString();
   const [ createdTasks ] = await connection.execute(`INSERT INTO tasks(title, status, createat) values('${title}', 'pendente', '${time}');`);
-  return createdTasks;
+  return {insertId: createdTasks.insertId};
 };
 
-module.exports = { getAllTask, createTasks };
+const deleteTask = async (taskId) => {
+  const [ deletedTask ] = await connection.execute(`DELETE FROM tasks WHERE id = ${taskId}`);
+  return deletedTask;
+};
+ 
+module.exports = { getAllTask, createTasks, deleteTask };
