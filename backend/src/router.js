@@ -6,6 +6,6 @@ const { validateBodyToPostTasks, validateParamIdToDeleteTasks } = require('./mid
 router.get('/tasks', tasksController.getAllTask);
 router.post('/tasks',validateBodyToPostTasks, tasksController.postTask);
 router.delete('/tasks',validateParamIdToDeleteTasks, tasksController.deleteTask);
-
+router.put('/tasks',validateBodyToPostTasks, tasksController.updateTask);
 
 module.exports = router;

@@ -1,7 +1,7 @@
 const validateEspecialChars = (value) =>
 {
   try{
-    const regex = /\W|_/;
+    const regex = /^[\w&.\-]+$/;
     return regex.test(value);
   }catch(err)
   {
