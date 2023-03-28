@@ -29,6 +29,10 @@ npm run start
 npm run test
 ```
 
+## Swagger Doc
+```sh
+http://localhost:3333/doc
+```
 ## Author
 
 👤 **Jorel Magatti (JorelDev)**

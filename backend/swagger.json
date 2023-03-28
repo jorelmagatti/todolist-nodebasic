@@ -1,0 +1,22 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "todolist",
+      "description": "API Todo List com swagger",
+      "version": "1.0"
+    },
+    "host": "localhost:3333",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/tasks": {
+        "get": {
+          "description": "Retorna uma lista json com todas as tasks salvas.",
+          "operationId": "TASK",
+          "responses": {}
+        }
+      }
+    }   
+}
