@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const tasksController = require('./controllers/tasksController');
-const { validateBodyToPostTasks, validateParamIdToDeleteTasks } = require('./middlewares/tasksMiddleware');
+const { validateTitleToPostTasks, validateStatusToPostTasks, validateIdToPostTasks, validateParamIdToDeleteTasks } = require('./middlewares/tasksMiddleware');
 
 router.get('/tasks', tasksController.getAllTask);
-router.post('/tasks',validateBodyToPostTasks, tasksController.postTask);
+router.post('/tasks',validateTitleToPostTasks, tasksController.postTask);
 router.delete('/tasks',validateParamIdToDeleteTasks, tasksController.deleteTask);
-router.put('/tasks',validateBodyToPostTasks, tasksController.updateTask);
+router.put('/tasks',validateIdToPostTasks, validateTitleToPostTasks, validateStatusToPostTasks, tasksController.updateTask);
 
 module.exports = router;

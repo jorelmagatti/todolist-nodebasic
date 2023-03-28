@@ -18,8 +18,8 @@ const deleteTask = async (taskId) => {
 };
 
 const updateTasks = async (task) => {
-  const { id, title, status,  createat} = task;
-  const [ updatedTasks ] = await connection.execute(`UPDATE tasks SET title = '${title}', status = '${status}', createat = '${createat}' WHERE id = ${id}`);
+  const { id, title, status  } = task;
+  const [ updatedTasks ] = await connection.execute(`UPDATE tasks SET title = '${title}', status = '${status}' WHERE id = ${id}`);
   return {insertId: updatedTasks.insertId};
 };
  
