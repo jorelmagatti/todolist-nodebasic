@@ -9,7 +9,7 @@
   </a>
 </p>
 
-> Um projeto nodejs api rest crud para todo list
+> Um projeto modelo nodejs api rest crud para todo list, neste projeto foi aplicado tratativas de entrada usando middleware na rota evitando caracteres espeiais e avaris do mesmo tipo.
 
 ## Install
 
