@@ -1,24 +1,12 @@
-const tasksModel = require('../models/tasksModel');
+const tasksServices = require('../services/taskServices');
 
-const getAllTask = async (_req, res) => {
-  const [tasks] = await tasksModel.getAllTask();
-  return res.status(200).json(tasks);
-};
+const getAllTask = async (_req, res) => await tasksServices.getAllTask(_req, res);
 
-const postTask = async (req, res) => {
-  const tasks = await tasksModel.createTasks(req.body);
-  return res.status(201).json(tasks);
-};
+const postTask = async (req, res) => await tasksServices.postTask(req, res);
 
-const deleteTask = async (req, res) => {
-  const tasks = await tasksModel.deleteTask(req.query.id);
-  return res.status(201).json(tasks);
-};
+const deleteTask = async (req, res) => await tasksServices.deleteTask(req, res);
 
-const updateTask = async (req, res) => {
-  const tasks = await tasksModel.updateTasks(req.body);
-  return res.status(201).json(tasks);
-};
+const updateTask = async (req, res) => await tasksServices.updateTask(req, res);
 
 module.exports = {
   getAllTask,
