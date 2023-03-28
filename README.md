@@ -40,6 +40,7 @@ http://localhost:3333/doc
 * Twitter: [@jorelmagatti](https://twitter.com/jorelmagatti)
 * Github: [@jorelmagatti](https://github.com/jorelmagatti)
 * LinkedIn: [@jorelmagatti](https://linkedin.com/in/jorelmagatti)
+* Instagram: [@jorelmagatti](https://www.instagram.com/jorel_magatti/)
 
 ## Show your support
 
